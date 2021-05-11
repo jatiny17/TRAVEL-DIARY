@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const vacationSchema = mongoose.Schema({
+    username: String,
     destination: String,
     arrival: Date,
     departure: Date,

@@ -5,14 +5,17 @@
     <%- include("../template/head"); %>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column min-vh-100">
 
     <script type="text/javascript" src="scripts/home.js" defer></script>
+    <div id="user" data-user=<%=user%> ></div>
 
     <main>
         <div class="jumbotron">
             <h1 class="text-center">TRAVEL-DIARY</h1>
-            <p class="text-center">Welcome User</p>
+            <p class="text-center">Welcome
+                <%=user%>
+            </p>
         </div>
 
         <div>
@@ -20,6 +23,10 @@
             <button type="button" id="vacationAdd" class="btn btn-primary btn-lg">Add Vacation</button>
         </div>
     </main>
+
+    <footer class="mt-auto text-center" ">
+        <%- include('../template/footer'); %>
+    </footer>
 </body>
 
 </html>

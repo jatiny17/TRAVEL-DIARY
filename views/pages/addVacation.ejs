@@ -5,14 +5,18 @@
     <%- include("../template/head"); %>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column min-vh-100">
     <main>
         <div class="jumbotron">
             <h1 class="text-center">TRAVEL-DIARY</h1>
-            <p class="text-center">Add Your Vacation Experience :</p>
+            <p class="text-center">Hey
+                <%=user%>, add your vacation experience :</p>
         </div>
 
         <form action="/vacations/add" method="POST">
+
+            <input type="hidden" name="username" value=<%=user%> >
+
             <div class="form-group">
                 <label for="destination">Destination</label>
                 <input type="text" class="form-control" id="destination" name="destination">
@@ -36,4 +40,10 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </main>
+
+    <footer class="mt-auto text-center" ">
+        <%- include('../template/footer'); %>
+    </footer>
 </body>
+
+</html>
