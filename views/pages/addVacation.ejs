@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../template/head"); %>
+</head>
+
+<body class="container">
+    <main>
+        <div class="jumbotron">
+            <h1>TRAVEL-DIARY</h1>
+            <p>Add Your Vacation Experience :</p>
+        </div>
+
+        <form action="/vacations/add" method="POST">
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination" name="destination">
+            </div>
+
+            <div class="form-group">
+                <label for="arrival">Arrival</label>
+                <input type="date" class="form-control" id="arrival" name="arrival">
+            </div>
+
+            <div class="form-group">
+                <label for="depart">Departure</label>
+                <input type="date" class="form-control" id="depart" name="depart">
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <textarea class="form-control" id="experience" name="experience"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
+</body>

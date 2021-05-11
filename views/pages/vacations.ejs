@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../template/head"); %>
+</head>
+
+<body class="container">
+    <main>
+        <div class="jumbotron">
+            <h1>TRAVEL-DIARY</h1>
+            <p>Your List Of Vacations:</p>
+        </div>
+
+        <ul class="list-group">
+            <%data.forEach( (entry) => {%>
+                <li class="list-group-item text-dark">
+                    <%=entry.destination%>
+                </li>
+                <%});
+            %>
+        </ul>
+    </main>
+</body>
+
+</html>
