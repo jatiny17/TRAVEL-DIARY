@@ -5,14 +5,16 @@
     <%- include("../template/head"); %>
 </head>
 
-<body class="container">
+<body class="container d-flex flex-column min-vh-100">
 
     <script type="text/javascript" src="scripts/home.js" defer></script>
 
     <main>
         <div class="jumbotron">
             <h1>TRAVEL-DIARY</h1>
-            <p>Welcome User</p>
+            <p>Welcome
+                <%=user%>
+            </p>
         </div>
 
         <div>
@@ -20,6 +22,10 @@
             <button type="button" id="vacationAdd" class="btn btn-primary btn-lg">Add Vacation</button>
         </div>
     </main>
+
+    <footer class="mt-auto text-center" ">
+        <%- include('../template/footer'); %>
+    </footer>
 </body>
 
 </html>

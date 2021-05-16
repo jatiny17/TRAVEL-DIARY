@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("pages/home", {
-        user: req.user.username
-    });
-})
+    req.logout();
+    res.redirect("/");
+});
 
 module.exports = router;

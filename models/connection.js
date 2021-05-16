@@ -11,4 +11,4 @@ mongoose.connect("mongodb://localhost:27017/TRAVEL-DIARY",
         } else {
             console.log("Connection Failed :/");
         }
-    })
+    });
